@@ -9,9 +9,7 @@ This project was built as part of a technical assignment, focusing on **authenti
 
 ## 🚀 Live Demo
 
-- **Live App (Vercel):** https://your-vercel-url.vercel.app  
-- **GitHub Repository:** https://github.com/your-username/my-bookmarks
-
+- **Live App (Vercel):** https://smart-bookmarks-umber.vercel.app/
 ---
 
 ## ✨ Features
@@ -64,7 +62,7 @@ This project was built as part of a technical assignment, focusing on **authenti
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/my-bookmarks.git
+git clone https://github.com/YaswanthSai2003/my-bookmarks.git
 cd my-bookmarks
 ```
 
@@ -104,12 +102,6 @@ http://localhost:3000
 2. Import repository into Vercel  
 3. Add environment variables in Vercel settings  
 4. Deploy  
-
-### Supabase OAuth Redirect URL
-
-```
-https://your-vercel-url.vercel.app/auth/callback
-```
 
 ---
 
