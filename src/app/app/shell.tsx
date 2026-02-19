@@ -192,35 +192,43 @@ export default function AppShell({
               </div>
 
               {/* Profile dropdown */}
-              <div className="relative">
-                <button
-                  type="button"
-                  onClick={() => setProfileOpen((v) => !v)}
-                  className="flex items-center gap-2 rounded-2xl px-2 py-1.5 hover:bg-gray-50"
-                >
-                  {avatarUrl ? (
-                    <img
-                      src={avatarUrl}
-                      alt="Profile"
-                      className="h-9 w-9 rounded-full object-cover"
-                    />
-                  ) : (
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
-                      {userEmail?.[0]?.toUpperCase() ?? "U"}
-                    </div>
-                  )}
-                  <ChevronDown className="h-4 w-4 text-gray-600" />
-                </button>
+<div className="relative">
+  <button
+    type="button"
+    onClick={() => setProfileOpen((v) => !v)}
+    className="flex items-center gap-2 rounded-2xl px-2 py-1.5 transition hover:bg-gray-100 focus:outline-none"
+  >
+    {avatarUrl ? (
+      <img
+        src={avatarUrl}
+        alt="Profile"
+        className="h-9 w-9 rounded-full object-cover"
+      />
+    ) : (
+      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
+        {userEmail?.[0]?.toUpperCase() ?? "U"}
+      </div>
+    )}
+    <ChevronDown className="h-4 w-4 text-gray-600" />
+  </button>
 
                 {profileOpen && (
-                  <div className="absolute right-0 top-full mt-3 w-64 overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/5">
-                    <div className="px-4 py-3">
-                      <div className="text-xs text-gray-500">Signed in as</div>
-                      <div className="truncate text-sm font-semibold text-gray-900">
+                  <div className="absolute right-0 top-full mt-3 w-64 overflow-hidden rounded-2xl bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5 animate-in fade-in zoom-in-95 duration-150">
+                    
+                    {/* User Info */}
+                    <div className="px-4 py-4">
+                      <div className="text-xs font-medium uppercase tracking-wide text-gray-500">
+                        Signed in as
+                      </div>
+                      <div className="mt-1 truncate text-sm font-semibold text-gray-900">
                         {userEmail}
                       </div>
                     </div>
-
+              
+                    {/* Divider */}
+                    <div className="h-px bg-gray-100" />
+              
+                    {/* Sign Out */}
                     <button
                       type="button"
                       onClick={async () => {
@@ -228,7 +236,7 @@ export default function AppShell({
                         await supabase.auth.signOut();
                         window.location.href = "/login";
                       }}
-                      className="w-full px-4 py-3 text-left text-sm font-semibold text-gray-800 hover:bg-gray-50"
+                      className="w-full px-4 py-3 text-left text-sm font-medium text-gray-700 transition hover:bg-red-50 hover:text-red-600"
                     >
                       Sign out
                     </button>
