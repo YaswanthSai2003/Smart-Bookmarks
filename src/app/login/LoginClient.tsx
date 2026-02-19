@@ -11,7 +11,6 @@ export default function LoginClient() {
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        // ✅ works on localhost + vercel without env var
         redirectTo: `${window.location.origin}/auth/callback`,
       },
     });
@@ -29,7 +28,7 @@ export default function LoginClient() {
             </div>
           </div>
 
-          <div className="mt-14 text-center">
+          <div className="mt-40 text-center">
             <h1 className="text-4xl font-semibold tracking-tight text-gray-900">
               Welcome to MyBookmarks
             </h1>
@@ -39,7 +38,7 @@ export default function LoginClient() {
 
             <button
               onClick={signInWithGoogle}
-              className="mt-10 inline-flex w-[360px] items-center justify-center gap-3 rounded-2xl bg-white px-6 py-3 text-base font-semibold text-gray-800 shadow-sm ring-1 ring-black/10 transition hover:bg-gray-50"
+              className="mt-10 inline-flex w-[360px] items-center justify-center gap-3 rounded-2xl bg-white px-6 py-3 cursor-pointer text-base font-semibold text-gray-800 shadow-sm ring-1 ring-black/10 transition hover:bg-gray-50"
             >
               <FcGoogle className="h-6 w-6" />
               Sign in with Google
