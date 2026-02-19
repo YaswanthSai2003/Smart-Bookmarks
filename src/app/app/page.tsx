@@ -1,23 +1,20 @@
-import { redirect } from "next/navigation";
-import { createSupabaseServerClient } from "../../lib/supabase/server";
 import AppShell from "./shell";
+import { createSupabaseServerClient } from "../../lib/supabase/server";
 
 export default async function AppPage() {
   const supabase = await createSupabaseServerClient();
-
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  if (!user) redirect("/login");
+  if (!user) {
+    return null;
+  }
 
   const email = user.email ?? "";
-
-  const meta = (user.user_metadata ?? {}) as Record<string, unknown>;
-
   const avatarUrl =
-    (typeof meta.avatar_url === "string" ? meta.avatar_url : null) ??
-    (typeof meta.picture === "string" ? meta.picture : null);
+    (user.user_metadata?.avatar_url as string | undefined) ??
+    (user.user_metadata?.picture as string | undefined) ??
+    null;
 
   return <AppShell userId={user.id} userEmail={email} avatarUrl={avatarUrl} />;
 }
