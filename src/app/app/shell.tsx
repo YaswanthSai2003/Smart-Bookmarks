@@ -213,7 +213,7 @@ export default function AppShell({
                 </button>
 
                 {profileOpen && (
-                  <div className="absolute right-0 mt-2 w-64 overflow-hidden rounded-2xl border bg-white shadow-lg">
+                  <div className="absolute right-0 top-full mt-3 w-64 overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/5">
                     <div className="px-4 py-3">
                       <div className="text-xs text-gray-500">Signed in as</div>
                       <div className="truncate text-sm font-semibold text-gray-900">
