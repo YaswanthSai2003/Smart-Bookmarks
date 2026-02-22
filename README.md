@@ -1,4 +1,4 @@
-# MyBookmarks 🔖
+# MyBookmarks 
 
 MyBookmarks is a simple, clean, and secure bookmark manager built with Next.js and Supabase.  
 It allows users to sign in with Google, save bookmarks, organize them using categories and tags, mark favorites, and see real-time updates across tabs.
@@ -7,12 +7,12 @@ This project was built as part of a technical assignment, focusing on **authenti
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 - **Live App (Vercel):** https://smart-bookmarks-umber.vercel.app/
 ---
 
-## ✨ Features
+## Features
 
 - Google OAuth authentication
 - Private bookmarks per user
@@ -26,7 +26,7 @@ This project was built as part of a technical assignment, focusing on **authenti
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend:** Next.js (App Router), React, TypeScript
 - **Styling:** Tailwind CSS
@@ -37,7 +37,7 @@ This project was built as part of a technical assignment, focusing on **authenti
 
 ---
 
-## 🔐 Authentication & User Privacy
+## Authentication & User Privacy
 
 - Authentication is handled using **Supabase Google OAuth**
 - Each bookmark is stored with a `user_id`
@@ -47,7 +47,7 @@ This project was built as part of a technical assignment, focusing on **authenti
 
 ---
 
-## ⚡ Real-Time Updates
+## Real-Time Updates
 
 - Supabase Realtime listens to database changes on the `bookmarks` table
 - When a bookmark is added, edited, or deleted:
@@ -57,7 +57,7 @@ This project was built as part of a technical assignment, focusing on **authenti
 
 ---
 
-## 📦 Local Setup
+## Local Setup
 
 ### 1. Clone the repository
 
@@ -96,7 +96,7 @@ http://localhost:3000
 
 ---
 
-## 🚢 Deployment (Vercel)
+## Deployment (Vercel)
 
 1. Push project to GitHub  
 2. Import repository into Vercel  
@@ -105,7 +105,7 @@ http://localhost:3000
 
 ---
 
-## 🧠 Problems Faced & How I Solved Them
+## Problems Faced & How I Solved Them
 
 ### 1️⃣ Duplicate Bookmarks
 
@@ -179,7 +179,7 @@ Allowing free-text tags caused clutter and inconsistency.
 
 ---
 
-## 🎨 Design Decisions
+## Design Decisions
 
 - Minimal, distraction-free UI  
 - Sidebar for navigation and filters  
@@ -189,7 +189,7 @@ Allowing free-text tags caused clutter and inconsistency.
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Folder-based organization  
 - Drag & drop bookmarks  
